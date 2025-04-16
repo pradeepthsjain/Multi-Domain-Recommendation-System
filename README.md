@@ -43,6 +43,9 @@ cd course-recommender-main
 cd Product-Recommendation-Engine-master
 ```
 ```directory
+cd Graphs
+```
+```directory
 cd movie-recommendation-system-master
 ```
 ```bash
@@ -60,7 +63,7 @@ python app.py
 ```
 
 ```run
-python app.py
+streamlit run app.py
 ```
 
 ```run
