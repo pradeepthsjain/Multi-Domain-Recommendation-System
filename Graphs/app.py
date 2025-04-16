@@ -6,7 +6,7 @@ import numpy as np
 
 # Streamlit page setup
 st.set_page_config(page_title="Multi-Domain Recommendation System", layout="wide")
-st.title("🤖 Multi-Domain Recommendation System (Random Sample View)")
+st.title("🤖 Multi-Domain Recommendation System ")
 
 # Create 3 tabs
 tab1, tab2, tab3 = st.tabs(["🎓 Course", "🎬 Movie", "🛒 E-Commerce"])
@@ -15,7 +15,7 @@ tab1, tab2, tab3 = st.tabs(["🎓 Course", "🎬 Movie", "🛒 E-Commerce"])
 # 🎓 Course Tab – Random Pie Chart
 # ================================
 with tab1:
-    st.header("🎓 Course Recommendations (Random Sample)")
+    st.header("🎓 Course Recommendations")
 
     # Show random course recommendations
     st.subheader("📘 Sample Course List")
@@ -35,7 +35,7 @@ with tab1:
             st.markdown("[🔗 Go to Course](https://example.com)")
 
     # Pie chart
-    st.subheader("📊 Difficulty Level Distribution (Random)")
+    st.subheader("📊 Difficulty Level Distribution")
     diff_data = pd.DataFrame({
         'Difficulty': ['Beginner', 'Intermediate', 'Advanced'],
         'Count': np.random.randint(10, 50, 3)
@@ -49,7 +49,7 @@ with tab1:
 # 🎬 Movie Tab – Random Bar Chart
 # =============================
 with tab2:
-    st.header("🎬 Movie Recommendations (Random Sample)")
+    st.header("🎬 Movie Recommendations")
 
     # Show random movies
     st.subheader("🎞️ Sample Movie List")
@@ -78,7 +78,7 @@ with tab2:
 # 🛒 E-Commerce Tab – Random Histogram
 # ==================================
 with tab3:
-    st.header("🛒 E-Commerce Recommendations (Random Sample)")
+    st.header("🛒 E-Commerce Recommendations")
 
     # Show random products
     st.subheader("🛍️ Sample Product List")
