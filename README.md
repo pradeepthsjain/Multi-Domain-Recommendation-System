@@ -36,6 +36,15 @@ The Multi-Domain Recommendation System is an AI-powered project that provides pe
 ## 📁 Project Execution
 
 Please follow the below steps to run this project.
+```directory
+cd course-recommender-main
+```
+```directory
+cd Product-Recommendation-Engine-master
+```
+```directory
+cd movie-recommendation-system-master
+```
 ```bash
 python -m venv myenv
 ```
@@ -45,21 +54,15 @@ myenv\Scripts\activate
 ```ini
 pip install -r requirements.txt
 ```
-```directory
-cd course-recommender-main
-```
+
 ```run
 python app.py
 ```
-```directory
-cd Product-Recommendation-Engine-master
-```
+
 ```run
 python app.py
 ```
-```directory
-cd movie-recommendation-system-master
-```
+
 ```run
 python manage.py runserver
 ```
