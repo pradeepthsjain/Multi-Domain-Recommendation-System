@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coursera Recommender</title>
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
+    <style>
+        /* Background Video Styling */
+        #myVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.85;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        nav .brand-logo {
+            font-size: 20px;
+            padding-left: 15px;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        /* Form Styling */
+        .input-field input {
+            border: 2px solid #ccc;
+            padding: 10px;
+            border-radius: 25px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .input-field input:focus {
+            border-color: #007bff;
+            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+        }
+
+        /* Updated Button Styling */
+        .btn-large {
+            background-color: #d3d3d3;
+            color: black;
+            border-radius: 25px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn-large:hover {
+            background-color: #a9a9a9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        footer .white-text {
+            color: #fff !important;
+        }
+
+        footer a {
+            color: #ddd !important;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #fff !important;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <!-- Main Content -->
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <h1 class="header center white-text">Courses Recommender</h1>
+            <div class="row center">
+                <h5 class="header col s12 light white-text">Coursera Courses Recommender</h5>
+            </div>
+
+            <!-- Form Section -->
+            <div class="row">
+                <form action='/predict' method="POST" class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6 offset-s3">
+                            <label for="first_name"><b>Search Courses</b></label>
+                            <input placeholder="Type course name to get recommendations" name="course" id="first_name" type="text" class="validate">
+                        </div>
+                    </div>
+
+                    <div class="row center">
+                        <button type="submit" class="btn-large waves-effect waves-light">Search Courses</button>
+                    </div>
+                </form>
+            </div>
+
+            <h4 class="center white-text"><b>{{ message }}</b></h4>
+            <br>
+            <p class="center white-text">{{ pred }}</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
